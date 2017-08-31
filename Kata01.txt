@@ -1,0 +1,9 @@
+This kata does not involve any actual code, and it will be held in this text file.
+The kata: http://codekata.com/kata/kata01-supermarket-pricing/
+
+Generally speaking, rounding per receipt entry and rounding the subtotal will be a wash given a large enough data set.  (The IRS recognizes this too...if you look at the instructions for form 1040, you can either include cents for all entries or no entries; they do not let you pick and choose so that you always round down.)
+Rounding per reciept item will be easier to implement, as you are not required to carry as much precision throughout the checkout process.
+Checkout scales are digital; they can be calibrated to read in either decimal pounds or in straight ounces depending on the given item code.
+The cost of goods sold is completely separate from the sale price and is recorded differently in accounting systems (have I mentioned I'm also working on an accounting degree?).  Existing inventory is valued at the purchase price, not at the sale price.
+It is not strictly necessary to have an audit trail for pricing decisions, but changes to price will show up at the end of the budget period as a variance.  An audit trail will help to explain this variance.  Perhaps track how many units were sold at each price within the buget period.  Dates aren't really necessary (but can help track sales volumes at various prices).
+"A deal is only a good deal if you actually need/want the item;" If you only need 1 can, buying 2 in order to get a 3rd for free is not necessarily a good deal.  If you were planning on buying 2 or 3 anyway, the 3rd can be considered to be free, but if you were only planning on buying 1, then the 2nd and 3rd would each be half off.
